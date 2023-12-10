@@ -6,7 +6,7 @@ import {
   onAuthStateChanged,
 } from 'firebase/auth';
 import { initializeApp } from 'firebase/app';
-import { getDatabase, ref, child, get } from 'firebase/database';
+import { getDatabase, ref, get } from 'firebase/database';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -20,32 +20,20 @@ const auth = getAuth();
 const provider = new GoogleAuthProvider();
 const database = getDatabase(app);
 
-export async function login() {
-  return signInWithPopup(auth, provider)
-    .then((result) => {
-      const credential = GoogleAuthProvider.credentialFromResult(result);
-      const token = credential.accessToken;
-      const user = result.user;
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      const email = error.customData.email;
-      const credential = GoogleAuthProvider.credentialFromError(error);
-    });
+export function login() {
+  signInWithPopup(auth, provider) //
+    .catch(console.error);
 }
 
-export async function logout() {
-  return signOut(auth)
-    .then(null)
-    .catch((error) => {
-      // An error happened.
-    });
+export function logout() {
+  signOut(auth) //
+    .catch(console.error);
 }
 
 export function onUserStateChange(callback) {
   onAuthStateChanged(auth, async (user) => {
     const updatedUser = user ? await adminUser(user) : null;
+    console.log(updatedUser);
     callback(updatedUser);
   });
 }
