@@ -30,9 +30,11 @@ export default function Navbar() {
       <nav className="flex items-center gap-4 font-semibold">
         <Link to="/products">Products</Link>
         <Link to="/carts">Carts</Link>
-        <Link to="/products/new" className="text-2xl">
-          <BsFillPencilFill />
-        </Link>
+        {user && user.idAdmin && (
+          <Link to="/products/new" className="text-2xl">
+            <BsFillPencilFill />
+          </Link>
+        )}
         {!user && <button onClick={handleLogin}>Login</button>}
         {user && <button onClick={handleLogout}>Logout</button>}
       </nav>
