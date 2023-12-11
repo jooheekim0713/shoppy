@@ -44,6 +44,11 @@ export default function NewProducts() {
             alt="local file"
           />
         )}
+        {!file && (
+          <div className="w-96 mb-2 bg-slate-100 border-2">
+            파일을 선택해주세요
+          </div>
+        )}
         <form className="flex flex-col px-12 block" onSubmit={handleSubmit}>
           <input
             type="file"
