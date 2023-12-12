@@ -4,7 +4,7 @@ import { FaShopify } from 'react-icons/fa';
 import { BsFillPencilFill } from 'react-icons/bs';
 import Button from './ui/Button';
 import User from './User';
-import { useAuthContext } from './context/AuthContext';
+import { useAuthContext } from '../context/AuthContext';
 
 export default function Navbar() {
   const { user, login, logout } = useAuthContext();

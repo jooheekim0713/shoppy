@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Button from '../components/ui/Button';
+import { useAuthContext } from '../context/AuthContext';
 
 export default function ProductDetail() {
+  const { user } = useAuthContext();
+
   const {
     state: {
       product: { id, image, title, description, category, price, options },
