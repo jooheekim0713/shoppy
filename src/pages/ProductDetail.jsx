@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Button from '../components/ui/Button';
 import useCart from '../hooks/useCart';
+import { useAuthContext } from '../context/AuthContext';
 
 export default function ProductDetail() {
+  const { user } = useAuthContext();
   const { addOrUpdateItem } = useCart();
   const {
     state: {
@@ -19,6 +21,10 @@ export default function ProductDetail() {
     const product = { id, image, title, price, option: selected, quantity: 1 };
     addOrUpdateItem.mutate(product, {
       onSuccess: () => {
+        if (!user) {
+          alert('로그인후 이용해주세요.');
+          return;
+        }
         setSuccess('장바구니에 추가되었습니다.');
         setTimeout(() => {
           setSuccess(null);
