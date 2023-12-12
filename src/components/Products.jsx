@@ -8,7 +8,11 @@ export default function Products() {
     isLoading,
     error,
     data: products,
-  } = useQuery({ queryKey: ['products'], queryFn: getProducts });
+  } = useQuery({
+    queryKey: ['products'],
+    queryFn: getProducts,
+    staleTime: 1000 * 6,
+  });
   return (
     <>
       {isLoading && <p>Loading...</p>}
