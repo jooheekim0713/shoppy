@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Button from '../components/ui/Button';
 import { useAuthContext } from '../context/AuthContext';
+import { addOrUpdateToCart } from '../api/firebase';
 
 export default function ProductDetail() {
-  const { user } = useAuthContext();
-
+  const { uid } = useAuthContext();
   const {
     state: {
       product: { id, image, title, description, category, price, options },
@@ -16,7 +16,8 @@ export default function ProductDetail() {
     setSelected(e.target.value);
   };
   const handleClick = () => {
-    //장바구니 추가하기 로직 구현
+    const product = { id, image, title, price, option: selected, quantity: 1 };
+    addOrUpdateToCart(uid, product);
   };
   return (
     <section>
