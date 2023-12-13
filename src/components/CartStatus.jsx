@@ -6,7 +6,6 @@ export default function CartStatus() {
   const {
     cartQuery: { data: products },
   } = useCart({});
-  console.log(products);
   return (
     <div className="relative">
       <AiOutlineShoppingCart className="text-4xl" />
