@@ -1,4 +1,7 @@
+[build]
+    command = "npm run build"
+    publish = "build"
 [[redirects]]
-  from = "/*"
-  to = "/pages/NotFound.js#Error404"
-  status = 404
+    from = "/*"
+    to = "/index.html"
+    status = 200
