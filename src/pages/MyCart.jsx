@@ -5,6 +5,7 @@ import { FaEquals } from 'react-icons/fa';
 import PriceCard from '../components/PriceCard';
 import Button from '../components/ui/Button';
 import useCart from '../hooks/useCart';
+import { BsCart4 } from 'react-icons/bs';
 
 const SHIPPING = 3000;
 export default function MyCart() {
@@ -26,7 +27,12 @@ export default function MyCart() {
       <p className="text-2xl text-center font-bold pb-4 border-b border-gray-300">
         내 장바구니
       </p>
-      {!hasProducts && <p>장바구니에 상품이 없습니다</p>}
+      {!hasProducts && (
+        <div className="mx-auto items-center justify-center mt-10">
+          <BsCart4 className="w-full text-9xl mb-5" />
+          <p className="font-semibold">장바구니에 담긴 상품이 없습니다 </p>
+        </div>
+      )}
       {hasProducts && (
         <>
           <ul className="border-b border-gray-300 mb-8 p-4 px-8">
