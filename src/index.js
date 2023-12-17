@@ -10,6 +10,8 @@ import NewProducts from './pages/NewProducts';
 import ProductDetail from './pages/ProductDetail';
 import MyCart from './pages/MyCart';
 import ProtectedRoute from './pages/ProtectedRoute';
+import Success from './pages/Success';
+import Fail from './pages/Fail';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +37,14 @@ const router = createBrowserRouter([
             <MyCart />
           </ProtectedRoute>
         ),
+      },
+      {
+        path: '/success',
+        element: <Success />,
+      },
+      {
+        path: '/fail',
+        element: <Fail />,
       },
     ],
   },

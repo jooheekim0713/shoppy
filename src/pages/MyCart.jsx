@@ -3,9 +3,9 @@ import CartItem from '../components/CartItem';
 import { BsFillPlusCircleFill } from 'react-icons/bs';
 import { FaEquals } from 'react-icons/fa';
 import PriceCard from '../components/PriceCard';
-import Button from '../components/ui/Button';
 import useCart from '../hooks/useCart';
 import { BsCart4 } from 'react-icons/bs';
+import Payment from '../components/Payment';
 
 const SHIPPING = 3000;
 export default function MyCart() {
@@ -48,7 +48,7 @@ export default function MyCart() {
             <FaEquals className="shrink-0" />
             <PriceCard text="총가격" price={totalPrice + SHIPPING} />
           </div>
-          <Button text="주문하기"></Button>
+          <Payment total={totalPrice + SHIPPING} />
         </>
       )}
     </section>

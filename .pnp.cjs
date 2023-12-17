@@ -33,6 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/jest-dom", "npm:5.17.0"],\
             ["@testing-library/react", "virtual:16e654a9d365e02f7e28ac465e17fac93840604085351a9f6343f69b3a793d34618b538eea2150d2f1f567e908e7676db665faf19a175c38c1abccd63a770793#npm:13.4.0"],\
             ["@testing-library/user-event", "virtual:16e654a9d365e02f7e28ac465e17fac93840604085351a9f6343f69b3a793d34618b538eea2150d2f1f567e908e7676db665faf19a175c38c1abccd63a770793#npm:13.5.0"],\
+            ["@tosspayments/payment-widget-sdk", "npm:0.10.1"],\
             ["eslint-config-react-app", "virtual:16e654a9d365e02f7e28ac465e17fac93840604085351a9f6343f69b3a793d34618b538eea2150d2f1f567e908e7676db665faf19a175c38c1abccd63a770793#npm:7.0.1"],\
             ["firebase", "npm:10.7.1"],\
             ["react", "npm:18.2.0"],\
@@ -5769,6 +5770,92 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@tootallnate-once-npm-1.1.2-0517220057-e1fb1bbbc1.zip/node_modules/@tootallnate/once/",\
           "packageDependencies": [\
             ["@tootallnate/once", "npm:1.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@tosspayments/brandpay-types", [\
+        ["npm:0.2.6", {\
+          "packageLocation": "./.yarn/cache/@tosspayments-brandpay-types-npm-0.2.6-b891e6e28a-c38394ef31.zip/node_modules/@tosspayments/brandpay-types/",\
+          "packageDependencies": [\
+            ["@tosspayments/brandpay-types", "npm:0.2.6"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:d8f25ad7bfea4fa6d21ba08ac04cf0c3000d2070372813eff32ad1788b11639bd6462d4024eb5bb3ccc4768283412f5ee84da5573dee2623b2061df19245e205#npm:0.2.6", {\
+          "packageLocation": "./.yarn/__virtual__/@tosspayments-brandpay-types-virtual-4682dfeca4/0/cache/@tosspayments-brandpay-types-npm-0.2.6-b891e6e28a-c38394ef31.zip/node_modules/@tosspayments/brandpay-types/",\
+          "packageDependencies": [\
+            ["@tosspayments/brandpay-types", "virtual:d8f25ad7bfea4fa6d21ba08ac04cf0c3000d2070372813eff32ad1788b11639bd6462d4024eb5bb3ccc4768283412f5ee84da5573dee2623b2061df19245e205#npm:0.2.6"],\
+            ["@types/typescript", null],\
+            ["typescript", null]\
+          ],\
+          "packagePeers": [\
+            "@types/typescript",\
+            "typescript"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@tosspayments/payment-widget-sdk", [\
+        ["npm:0.10.1", {\
+          "packageLocation": "./.yarn/cache/@tosspayments-payment-widget-sdk-npm-0.10.1-ce5359b710-c9c0a356c7.zip/node_modules/@tosspayments/payment-widget-sdk/",\
+          "packageDependencies": [\
+            ["@tosspayments/payment-widget-sdk", "npm:0.10.1"],\
+            ["@tosspayments/payment-widget__types", "npm:1.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@tosspayments/payment-widget-types", [\
+        ["npm:0.0.5", {\
+          "packageLocation": "./.yarn/cache/@tosspayments-payment-widget-types-npm-0.0.5-9d68c14c83-0ede3a3cec.zip/node_modules/@tosspayments/payment-widget-types/",\
+          "packageDependencies": [\
+            ["@tosspayments/payment-widget-types", "npm:0.0.5"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:d8f25ad7bfea4fa6d21ba08ac04cf0c3000d2070372813eff32ad1788b11639bd6462d4024eb5bb3ccc4768283412f5ee84da5573dee2623b2061df19245e205#npm:0.0.5", {\
+          "packageLocation": "./.yarn/__virtual__/@tosspayments-payment-widget-types-virtual-5f8f418d88/0/cache/@tosspayments-payment-widget-types-npm-0.0.5-9d68c14c83-0ede3a3cec.zip/node_modules/@tosspayments/payment-widget-types/",\
+          "packageDependencies": [\
+            ["@tosspayments/payment-widget-types", "virtual:d8f25ad7bfea4fa6d21ba08ac04cf0c3000d2070372813eff32ad1788b11639bd6462d4024eb5bb3ccc4768283412f5ee84da5573dee2623b2061df19245e205#npm:0.0.5"],\
+            ["@types/typescript", null],\
+            ["typescript", null]\
+          ],\
+          "packagePeers": [\
+            "@types/typescript",\
+            "typescript"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@tosspayments/payment-widget__types", [\
+        ["npm:1.0.0", {\
+          "packageLocation": "./.yarn/cache/@tosspayments-payment-widget__types-npm-1.0.0-d8f25ad7bf-1a9340a1d7.zip/node_modules/@tosspayments/payment-widget__types/",\
+          "packageDependencies": [\
+            ["@tosspayments/payment-widget__types", "npm:1.0.0"],\
+            ["@tosspayments/brandpay-types", "virtual:d8f25ad7bfea4fa6d21ba08ac04cf0c3000d2070372813eff32ad1788b11639bd6462d4024eb5bb3ccc4768283412f5ee84da5573dee2623b2061df19245e205#npm:0.2.6"],\
+            ["@tosspayments/payment-widget-types", "virtual:d8f25ad7bfea4fa6d21ba08ac04cf0c3000d2070372813eff32ad1788b11639bd6462d4024eb5bb3ccc4768283412f5ee84da5573dee2623b2061df19245e205#npm:0.0.5"],\
+            ["@tosspayments/payment__types", "npm:1.67.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@tosspayments/payment__types", [\
+        ["npm:1.67.0", {\
+          "packageLocation": "./.yarn/cache/@tosspayments-payment__types-npm-1.67.0-241b2b610c-3c0d40579c.zip/node_modules/@tosspayments/payment__types/",\
+          "packageDependencies": [\
+            ["@tosspayments/payment__types", "npm:1.67.0"],\
+            ["@tosspayments/sdk-constants", "npm:0.2.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@tosspayments/sdk-constants", [\
+        ["npm:0.2.2", {\
+          "packageLocation": "./.yarn/cache/@tosspayments-sdk-constants-npm-0.2.2-89678e20e8-6169315e59.zip/node_modules/@tosspayments/sdk-constants/",\
+          "packageDependencies": [\
+            ["@tosspayments/sdk-constants", "npm:0.2.2"],\
+            ["type-fest", "npm:2.19.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -18106,6 +18193,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/jest-dom", "npm:5.17.0"],\
             ["@testing-library/react", "virtual:16e654a9d365e02f7e28ac465e17fac93840604085351a9f6343f69b3a793d34618b538eea2150d2f1f567e908e7676db665faf19a175c38c1abccd63a770793#npm:13.4.0"],\
             ["@testing-library/user-event", "virtual:16e654a9d365e02f7e28ac465e17fac93840604085351a9f6343f69b3a793d34618b538eea2150d2f1f567e908e7676db665faf19a175c38c1abccd63a770793#npm:13.5.0"],\
+            ["@tosspayments/payment-widget-sdk", "npm:0.10.1"],\
             ["eslint-config-react-app", "virtual:16e654a9d365e02f7e28ac465e17fac93840604085351a9f6343f69b3a793d34618b538eea2150d2f1f567e908e7676db665faf19a175c38c1abccd63a770793#npm:7.0.1"],\
             ["firebase", "npm:10.7.1"],\
             ["react", "npm:18.2.0"],\
@@ -19271,6 +19359,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/type-fest-npm-0.21.3-5ff2a9c6fd-e6b32a3b38.zip/node_modules/type-fest/",\
           "packageDependencies": [\
             ["type-fest", "npm:0.21.3"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:2.19.0", {\
+          "packageLocation": "./.yarn/cache/type-fest-npm-2.19.0-918b953248-a4ef07ece2.zip/node_modules/type-fest/",\
+          "packageDependencies": [\
+            ["type-fest", "npm:2.19.0"]\
           ],\
           "linkType": "HARD"\
         }]\
