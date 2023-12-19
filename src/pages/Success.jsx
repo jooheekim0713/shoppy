@@ -1,10 +1,8 @@
 import React from 'react';
-import CartItem from '../components/CartItem';
 import { BsFillPlusCircleFill } from 'react-icons/bs';
 import { FaEquals } from 'react-icons/fa';
 import PriceCard from '../components/PriceCard';
 import useCart from '../hooks/useCart';
-import Payment from '../components/Payment';
 
 const SHIPPING = 3000;
 export default function Success() {
