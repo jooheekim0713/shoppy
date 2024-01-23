@@ -18,7 +18,14 @@ export default function ProductDetail() {
     setSelected(e.target.value);
   };
   const handleClick = () => {
-    const product = { id, image, title, price, option: selected, quantity: 1 };
+    const product = {
+      id: `${id},${selected}`,
+      image,
+      title,
+      price,
+      option: selected,
+      quantity: 1,
+    };
     addOrUpdateItem.mutate(product, {
       onSuccess: () => {
         if (!user) {
