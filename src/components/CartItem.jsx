@@ -2,8 +2,10 @@ import React from 'react';
 import { AiOutlineMinusSquare, AiOutlinePlusSquare } from 'react-icons/ai';
 import { RiDeleteBin5Fill } from 'react-icons/ri';
 import useCart from '../hooks/useCart';
+import { numberWithCommas } from '../common/utils.ts';
 
 const ICON_CLASS = 'transition-all cursor-pointer hover:scale-105 mx-2';
+
 export default function CartItem({
   product,
   product: { id, image, title, price, option, quantity },
@@ -24,7 +26,7 @@ export default function CartItem({
         <div className="basis-3/5">
           <p className="text-lg">{title}</p>
           <p className="text-xl font-bold text-brand">{option}</p>
-          <p>{price}원</p>
+          <p>{numberWithCommas(price)}원</p>
         </div>
         <div className="text-2xl flex items-center">
           <AiOutlineMinusSquare className={ICON_CLASS} onClick={handleMinus} />
