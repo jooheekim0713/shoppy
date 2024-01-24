@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { numberWithCommas } from '../common/utils.ts';
+import { numberWithCommas } from '../common/utils';
 
 export default function ProductCard({
   product,

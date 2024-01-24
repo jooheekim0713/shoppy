@@ -1,5 +1,5 @@
 import React from 'react';
-import { numberWithCommas } from '../common/utils.ts';
+import { numberWithCommas } from '../common/utils';
 
 export default function PriceCard({ text, price }) {
   return (

@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Button from '../components/ui/Button';
 import useCart from '../hooks/useCart';
 import { useAuthContext } from '../context/AuthContext';
-import { numberWithCommas } from '../common/utils.ts';
+import { numberWithCommas } from '../common/utils';
 
 export default function ProductDetail() {
   const { user } = useAuthContext();

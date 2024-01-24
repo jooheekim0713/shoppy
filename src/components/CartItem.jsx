@@ -2,7 +2,8 @@ import React from 'react';
 import { AiOutlineMinusSquare, AiOutlinePlusSquare } from 'react-icons/ai';
 import { RiDeleteBin5Fill } from 'react-icons/ri';
 import useCart from '../hooks/useCart';
-import { numberWithCommas } from '../common/utils.ts';
+import { numberWithCommas } from '../common/utils';
+import { Link } from 'react-router-dom';
 
 const ICON_CLASS = 'transition-all cursor-pointer hover:scale-105 mx-2';
 
@@ -21,7 +22,9 @@ export default function CartItem({
   const handleDelete = () => removeItem.mutate(id);
   return (
     <li className="flex justify-between my-2 items-center">
-      <img className="w-24 md:w-48 rounded-lg" src={image} alt={title} />
+      <Link to={`../products/${id.split(',')[0]}`}>
+        <img className="w-24 md:w-48 rounded-lg" src={image} alt={title} />
+      </Link>
       <div className="flex-1 flex justify-between ml-4">
         <div className="basis-3/5">
           <p className="text-lg">{title}</p>
