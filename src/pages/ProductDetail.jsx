@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Button from '../components/ui/Button';
 import useCart from '../hooks/useCart';
 import { useAuthContext } from '../context/AuthContext';
+import { numberWithCommas } from '../common/utils.ts';
 
 export default function ProductDetail() {
   const { user } = useAuthContext();
@@ -47,7 +48,7 @@ export default function ProductDetail() {
         <div className="w-full basis-5/12 flex flex-col p-4">
           <h2 className="text-3xl font-bold py-2">{title}</h2>
           <p className="text-2xl font-bold py-2  border-b border-gray-400">
-            {price}
+            {numberWithCommas(price)}
           </p>
           <p className="py-4 text-lg">{description}</p>
           <div className="flex items-center">
