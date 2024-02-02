@@ -5,7 +5,6 @@ import { AiOutlineMinusSquare, AiOutlinePlusSquare } from 'react-icons/ai';
 import { RiDeleteBin5Fill } from 'react-icons/ri';
 import useCart from '../hooks/useCart';
 import { numberWithCommas } from '../common/utils';
-import { Link } from 'react-router-dom';
 
 const ICON_CLASS = 'transition-all cursor-pointer hover:scale-105 mx-2';
 
